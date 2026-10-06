@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#101014" />
+    <title>Pipper Studio Workshop — Wallpapers</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="#" aria-label="Drift home">
+          <span class="brand-mark"><i></i><i></i><i></i></span>
+          <span>drift</span>
+        </a>
+
+        <nav class="nav-list" aria-label="Main navigation">
+          <a class="nav-item active" href="#discover"><span class="nav-icon">✦</span> Discover</a>
+          <a class="nav-item" href="#library"><span class="nav-icon">▱</span> My library <span class="nav-count">12</span></a>
+          <a class="nav-item" href="#favorites"><span class="nav-icon">♡</span> Favorites</a>
+        </nav>
+
+        <div class="sidebar-section">
+          <p class="eyebrow">Collections</p>
+          <a class="collection-link" href="#featured"><span class="dot violet"></span>Featured</a>
+          <a class="collection-link" href="#minimal"><span class="dot coral"></span>Minimal</a>
+          <a class="collection-link" href="#nature"><span class="dot mint"></span>Nature</a>
+          <a class="collection-link" href="#abstract"><span class="dot yellow"></span>Abstract</a>
+        </div>
+
+        <div class="sidebar-bottom">
+          <div class="pro-card">
+            <span class="pro-icon">✺</span>
+            <strong>Drift Pro</strong>
+            <p>Unlock 4K worlds<br />and live wallpapers.</p>
+            <button class="text-button">Explore Pro <span>↗</span></button>
+          </div>
+          <a class="settings-link" href="#settings"><span>⚙</span> Preferences</a>
+          <div class="profile">
+            <div class="avatar">JC</div>
+            <div><strong>Jamie Chen</strong><span>Free plan</span></div>
+            <span class="more">•••</span>
+          </div>
+        </div>
+      </aside>
+
+      <main class="main-content" id="discover">
+        <header class="topbar">
+          <div class="breadcrumbs"><span>Workspace</span><b>/</b><strong>Discover</strong></div>
+          <div class="top-actions">
+            <button class="icon-button" aria-label="Toggle theme" id="theme-toggle">☼</button>
+            <button class="notification" aria-label="Notifications"><span></span>♧</button>
+            <button class="avatar small">JC</button>
+          </div>
+        </header>
+
+        <section class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow accent">CURATED FOR YOUR SCREEN</p>
+            <h1>Find a little<br /><em>elsewhere.</em></h1>
+            <p class="hero-description">A calmer desktop starts with a beautiful view.<br />Explore wallpapers made to make your Mac feel yours.</p>
+            <div class="hero-meta"><span class="pulse"></span> 24 new wallpapers this week <span class="meta-separator">·</span> Updated today</div>
+          </div>
+          <div class="hero-art" aria-label="Featured wallpaper: Afterglow">
+            <div class="sun"></div><div class="mountain back"></div><div class="mountain front"></div>
+            <div class="hero-art-label"><span>FEATURED TODAY</span><strong>Afterglow</strong><small>by Pipper Studio Workshop</small></div>
+          </div>
+        </section>
+
+        <section class="toolbar">
+          <div class="section-title"><h2>Made for your Mac</h2><span id="wallpaper-count">1,006 wallpapers</span></div>
+          <div class="controls">
+            <label class="search"><span>⌕</span><input id="search-input" type="search" placeholder="Search wallpapers..." /></label>
+            <div class="filter-wrap">
+              <button class="filter-button" id="filter-button">All moods <span>⌄</span></button>
+              <div class="filter-menu" id="filter-menu">
+                <button data-filter="all">All moods</button><button data-filter="calm">Calm</button><button data-filter="bold">Bold</button><button data-filter="minimal">Minimal</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="chips" aria-label="Wallpaper categories">
+          <button class="chip active" data-category="all">All</button>
+          <button class="chip" data-category="abstract">Abstract</button>
+          <button class="chip" data-category="nature">Nature</button>
+          <button class="chip" data-category="minimal">Minimal</button>
+          <button class="chip" data-category="photography">Photography</button>
+        </div>
+
+        <section class="wallpaper-grid" id="wallpaper-grid" aria-live="polite"></section>
+        <p class="empty-state" id="empty-state">No wallpapers found. Try another search.</p>
+      </main>
+
+      <aside class="preview-panel">
+        <div class="preview-header"><p class="eyebrow">NOW PREVIEWING</p><button class="close-preview" aria-label="Hide preview">×</button></div>
+        <div class="macbook" id="macbook">
+          <div class="camera"></div>
+          <div class="screen" id="preview-screen">
+            <div class="screen-time">9:41</div><div class="screen-date">Tuesday, September 24</div>
+            <div class="screen-dock"><span></span><span></span><span></span><span></span><span></span></div>
+          </div>
+          <div class="hinge"></div><div class="keyboard"></div><div class="trackpad"></div>
+        </div>
+        <div class="preview-info">
+          <div><p class="eyebrow">SELECTED WALLPAPER</p><h2 id="preview-title">Afterglow</h2><p id="preview-author">Pipper Studio Workshop <span>·</span> Abstract</p></div>
+          <button class="heart-button" id="preview-heart" aria-label="Favorite selected wallpaper">♡</button>
+        </div>
+        <div class="preview-details"><span>5K resolution</span><span>16:10 ratio</span><span>48 MB</span></div>
+        <button class="apply-button" id="apply-button">Apply wallpaper <span>↗</span></button>
+        <p class="apply-note" id="apply-note">Looks great on a 14-inch MacBook Pro</p>
+      </aside>
+    </div>
+    <div class="toast" id="toast" role="status">Wallpaper applied to your desktop ✦</div>
+    <script src="app.js"></script>
+  </body>
+</html>
